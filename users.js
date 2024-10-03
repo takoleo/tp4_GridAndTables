@@ -25,6 +25,9 @@ function handleResponse(response){
     }
 
     function fetchUser(){
+        document.getElementById("grid").innerHTML="";
+        document.getElementById("headers").innerHTML="";
+        document.getElementById("users-body").innerHTML="";
         const head = `
                         <th>Nom</th>
                         <th>Phone</th>
@@ -63,6 +66,9 @@ function handleResponse(response){
     }
 
     function fetchUserGrille(){
+        document.getElementById("grid").innerHTML="";
+        document.getElementById("headers").innerHTML="";
+        document.getElementById("users-body").innerHTML="";
         fetch("https://jsonplaceholder.typicode.com/users")
             .then((response)=>handleResponseGrille(response))
             .then((data)=>handleDataGrille(data));
